@@ -1,0 +1,65 @@
+
+come può un utente interagire con il sistema operativo?
+1) interfaccia testuale (console, terminale, cmd - vecchiotta)
+2) interfaccia grafica (icone)
+
+ci interessano solo i comandi utili per interagire con il filesystem del sistema operativo
+
+
+
+
+
+clear
+
+- path (il percorso)
+pwd (print working directory)
+
+Abbiamo due tipi di path:
+- path assoluti ad esempio /Users/kutta/Desktop/Progetti
+- path relativi (relativi ad un altro path) ad esempio Desktop/Progetti oppure ./Desktop/Progetti
+
+
+- alias per le directory
+~ alias per la directory home dell'utente attualmente loggato sul sistema operativo
+. alias per la directory in cui mi trovo attualmente
+.. alias per la directory parent della directory attuale
+
+
+- directory
+mkdir nomeDellaDirectory (make directory)
+
+ls (list)
+ls -A
+
+cd path (change directory)
+
+rm -r pathDellaDirectory
+l'opzione -r per rm sta per recursive
+
+
+
+- file
+touch nomeDelFile (crea un file vuoto)
+cat nomeDelFile (stampa il contenuto del file sulla console)
+
+
+rm pathDelFile
+
+
+- vim
+editor di testo (di default) su unix si chiama vim
+
+vim pathDelFile
+
+vim presenta due modalità di funzionamento:
+- command mode è la modalità ke mi permette di scrivere comandi per vim
+- insert mode è la modalità ke mi permette di scrivere testo all'interno del file
+
+All'apertura di vim sono nella command mode!!!
+
+Posso passare dalla command mode alla insert mode premendo il tasto i
+Posso passare dalla insert mode alla command mode premendo il tasto esc
+
+I comandi interessanti sono 2:
+:wq (write quit)
+:q! (quit forced)
