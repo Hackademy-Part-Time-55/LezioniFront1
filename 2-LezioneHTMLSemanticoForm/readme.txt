@@ -37,3 +37,12 @@ Sono presenti input di type differente:
 - checkbox
 
 - file
+
+
+
+
+http://127.0.0.1:5500/index.html  ?   nome=Eric&cognome=Cartman
+? (separatore) where
+nome=Eric&cognome=Cartman   query string
+
+name1=value1 & name2=value2 & name3=value3

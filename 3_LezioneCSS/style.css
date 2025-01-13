@@ -1,0 +1,33 @@
+/*  
+
+* {
+    font-family: "Montserrat", Arial, sans-serif;   fallback
+}
+
+h2 {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 48px;
+}
+
+p {
+    background-image: url("https://picsum.photos/id/237/200/300");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+*/
+
+
+/*
+h2 {
+    color: red;
+}
+
+h2 {
+    color: blue;
+}
+*/
+
+div {
+    color: red;
+}

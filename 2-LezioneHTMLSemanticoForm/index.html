@@ -11,24 +11,38 @@
         <form action="" method="" enctype="">
 
             <label for="firstnameInput">insersci il tuo nome</label>
-            <input id="firstnameInput" type="text">
+            <input id="firstnameInput" type="text" name="firstname">
 
             <label for="lastnameInput">insersci il tuo cognome</label>
-            <input id="lastnameInput" type="text">
+            <input id="lastnameInput" type="text" name="lastname">
 
-            <input type="number" min="0" placeholder="insersci la tua età">
-            <input type="email" placeholder="insersci la tua email">
-            <input type="password" placeholder="insersci una password">
+            <input type="number" min="0" placeholder="insersci la tua età" name="age">
+            <input type="email" placeholder="insersci la tua email" name="email">
+            <input type="password" placeholder="insersci una password" name="password">
 
+
+
+            <!-- radio group - il name deve essere lo stesso con 2 value differenti 
             <label for="">Uomo</label>
-            <input type="radio">
+            <input type="radio" name="gender" value="male">
 
             <label for="">Donna</label>
-            <input type="radio">
+            <input type="radio" name="gender" value="female">
+            -->
+
+            <select name="gender" id="">
+                <option value="male">Uomo</option>
+                <option value="female">Donna</option>
+                <option value="fluid">Fluid</option>
+            </select>
 
             <label for="acceptTermsAndConditionsInput">Accetti termini e condizioni?</label>
-            <input id="acceptTermsAndConditionsInput" type="checkbox">
+            <input id="acceptTermsAndConditionsInput" type="checkbox" name="acceptTermsAndConditions" value="true">
 
+            <textarea name="aboutMe" placeholder="Parlaci di te"></textarea>
+
+            <!-- <input type="submit" value="Iscriviti"> -->
+            <button>Iscriviti</button>
         </form>
 
     </body>
