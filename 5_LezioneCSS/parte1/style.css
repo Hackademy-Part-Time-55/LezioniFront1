@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+.container p {
+    color: red;
+}
+
+.container > p {
+    color: red;
+}
+
+h1, p {
+    background-color: blue;
+    color: red;
+}
+*/
+
+/*
+.blueBackground {
+    background-color: blue;
+}
+
+.greenBackground {
+    background-color: green;
+}
+
+.redText {
+    color: red;
+}
+*/
+
+p {
+    min-width: 300px;
+    width: 50%;
+    background-color: red;
+}
