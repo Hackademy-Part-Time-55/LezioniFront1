@@ -1,0 +1,27 @@
+.bg-primary {
+    background-color: #6a1b9a !important;
+}
+
+.bg-accent {
+    background-color: #ff9100 !important;
+}
+
+.text-primary {
+    color: #6a1b9a !important;
+}
+
+.text-accent {
+    color: #ff9100;
+}
+
+/*
+// sm
+@media screen and (min-width: 576px) {
+    
+}
+
+// md
+@media screen and (min-width: 768px) {
+    
+}
+*/
