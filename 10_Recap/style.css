@@ -1,12 +1,4 @@
-:root {
-    --img-width: 400px;
-}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 /*
 img {
@@ -17,6 +9,10 @@ img {
 */
 
 /* 
+:root {
+    --img-width: 400px;
+}
+
 .btn {
     margin: 48px;
     border: none;
@@ -164,3 +160,45 @@ body {
     }
 }
 */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 48px;
+}
+
+.img-fluid {
+    max-width: 100%;
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+.card {
+    border: 1px solid #dadada;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px;
+}
+
+.card-author {
+    display: flex;
+    align-items: center;
+}
+
+.card-author > img {
+    margin-right: 12px;
+    width: 48px;
+    height: 48px;
+}
