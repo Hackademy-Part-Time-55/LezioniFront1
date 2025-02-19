@@ -263,7 +263,7 @@ sayHello();
 
 
 
-
+/*
 
 function sum(x, y) {
     let z;  // variabile locale
@@ -283,3 +283,22 @@ result = sum(a, b);
 console.log(result);
 
 console.log('fine');
+
+*/
+
+
+/*
+while(true) {
+    let selection = prompt('Seleziona una bevanda: 1 - Acqua, 2 - Coca Cola')
+    switch(selection) {
+        case '1':
+            alert('Erogazione acqua in corso');
+            break;
+        case '2':
+            alert('Erogazione Coca Cola in corso');
+            break;
+        default:
+            alert('Valore non valido');
+    }
+}
+*/
