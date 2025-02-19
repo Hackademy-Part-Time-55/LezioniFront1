@@ -250,8 +250,19 @@ console.log('fine');
 
 
 
-for(var n = 0; n <= 10; n += 2) {
+// for(var n = 0; n <= 10; n++) {
     
+//     if(n % 2 == 0) {
+//         console.log(n);
+//     }
+// }
+
+
+// n += 2
+// n = n + 2
+
+for(var n = 0; n <= 10; n += 2) {
     console.log(n);
 }
+
 
