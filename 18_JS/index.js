@@ -153,4 +153,12 @@ console.log(prices);
 
 
 
+const matrix = [[5, 3, 2], [1, 9, 5], [1, 4, 99]];
+
+for(let i=0; i < matrix.length; i++) {
+    for(let j=0; j < matrix[i].length; j++) {
+        console.log(matrix[i][j]);
+    }
+}
+
 
