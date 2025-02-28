@@ -232,7 +232,7 @@ posts.forEach((post) => {
 });
 */
 
-
+/*
 let dealBari = {
     location: 'via fasulla 123',
     city: 'Bari',
@@ -251,6 +251,18 @@ let dealBari = {
 dealBari.cars.forEach((car) => {
     console.log(car.brand, car.model);
 })
+*/
+
+
+
+let prices = [5, 150, 3, 2];
+
+let priceFound = prices.find((price) => {
+    return price > 100;
+});
+
+console.log(priceFound);
+
 
 
 

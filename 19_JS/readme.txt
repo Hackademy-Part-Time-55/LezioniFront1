@@ -1,5 +1,21 @@
 
 
+programmazione imperativa (come risolvere un problema):
+- programmazione strutturata (if, if else, switch, while, do while, for)    1960
+- programmazione procedurale (funzioni) 1970
+- programmazione orientata agli oggetti 1980
+
+
+
+programmazione dichiarativa (cosa fare per risolvere il problema):
+- programmazione funzionale (funzioni pure e impure - forEach, map, filter, find, findIndex, reduce, sort) anni 2000
+
+
+
+
+
+
+
 tipi di dato primitivi:
 - number
 - string
