@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* body {
+    padding: 48px;
+    background-color: blue;
+}
+
+div {
+    padding: 48px;
+    background-color: green;
+}
+
+p {
+    padding: 48px;
+    background-color: red;
+} */
+
+
+.last-minute {
+    padding: 12px;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.last-minute-warning {
+    background-color: red;
+    color: white;
+}
