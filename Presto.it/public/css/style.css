@@ -1,0 +1,92 @@
+:root {
+    --primary-color: #00b98e;
+    --primary-dark-color: #02ab83;
+    --primary-light-color: #02ab83;
+    --accent-color: #0e2e50;
+
+    --white: #EFFDF5;
+    --neutral: #666565;
+
+    --btn-carousel-size: 48px;
+}
+
+body {
+    background-color: var(--white);
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-accent:hover {
+    background-color: white;
+    color: var(--accent-color);
+}
+
+/********************* CATEGORY CARD *********************/
+
+.category-card {
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    background-color: var(--white);
+}
+
+.category-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px dashed var(--primary-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    background-color: white;
+
+    text-decoration: none;
+    color: var(--primary-color);
+
+    transition: all 400ms;
+}
+
+.category-card-body:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.category-card-body:hover .category-icon-container {
+    color: var(--primary-color);
+}
+
+.category-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 1.5rem;
+    border: 1px dashed var(--primary-color);
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+
+    background-color: white;
+}
+
+.category-card-title {
+    color: black;
+}
+
+.category-card-body:hover .category-card-title {
+    color: white;
+}
+
+.category-card-description {
+    margin-bottom: 0px;
+}
