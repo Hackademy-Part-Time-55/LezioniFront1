@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Announcements</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg shadow bg-body-tertiary">
+        <div class="container ">    <!-- px-4 px-sm-0 -->
+
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img class="me-3" src="/public/img/logo.png" alt="Il logo di Presto.it">
+                <span class="fs-3 fw-bold text-primary">Presto.it</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/announcements.html">Announcements</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <!-- FORM -->
+        <!-- TODO: gli id sono no sense e i value anche -->
+        <section class="container p-4 bg-primary">
+            <form class="row g-4" action="">
+                <div class="col-12 col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Cerca">
+                        <label for="floatingInput">Cerca</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect" >
+                            <option selected value="">Tutti gli annunci</option>
+                            <option value="1">Elettronica</option>
+                            <option value="2">Motori</option>
+                        </select>
+                        <label for="floatingSelect">Filtra per Categorie</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="form-floating">
+                        <input type="number" min="0" class="form-control" id="floatingPassword" placeholder="Min Price">
+                        <label for="floatingPassword">Min Price</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="form-floating">
+                        <input type="number" min="0" class="form-control" id="floatingPassword2" placeholder="Max Price">
+                        <label for="floatingPassword2">Max Price</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect2" >
+                            <option selected value="">Nessun Ordine</option>
+                            <option value="1">Dal più recente</option>
+                            <option value="2">Dal più vecchio</option>
+                            <option value="3">Dal meno costoso</option>
+                            <option value="4">Dal più costoso</option>
+                            <option value="5">Dalla A alla Z</option>
+                            <option value="6">Dalla Z alla A</option>
+                        </select>
+                        <label for="floatingSelect2">Ordina Annunci</label>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <button type="submit" class="w-100 h-100 btn btn-accent">Cerca</button>
+                </div>
+            </form>
+        </section>
+
+        
+        <section class="container p-4">
+            <div id="announcementsRow" class="row g-4">
+
+                <!-- <div class="col-12 col-md-6 col-xl-4">
+                    <div class="card">
+                        <div class="position-relative">
+                            <img src="https://picsum.photos/id/237/600/450" class="card-img-top" alt="...">
+                            <span class="position-absolute top-0 end-0 badge px-4 py-2 bg-danger text-uppercase">Sell</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <p class="card-subtitle mb-1 fs-5 fw-semibold text-primary">€120.12</p>
+                            <h5 class="card-title mb-4 display-5">Card title</h5>
+                            <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-around p-4 bg-white text-primary">
+                            <div>
+                                <i class="bi bi-heart-fill me-1"></i>
+                                <span>Like</span>
+                            </div>
+                            <div>
+                                <i class="bi bi-tag-fill me-1"></i>
+                                <span>Elettronica</span>
+                            </div>
+                            <div>
+                                <i class="bi bi-calendar-fill me-1"></i>
+                                <span>27/03/2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="/public/js/announcements.js"></script>
+</body>
+
+</html>

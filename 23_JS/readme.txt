@@ -35,3 +35,17 @@ application/x-www-form-urlencoded
 firstname=Eric&lastname=Cartman&age=10
 
 application/json    (javascript object notation)
+
+
+
+
+ReferenceError
+SyntaxError
+TypeError
+
+
+La chiamata ad una funzione dichiarata con async NON ritornata il valore dato a return ma ritorna un oggetto Promise
+che se sarà resolved allora otteremo il valore ritornato
+
+
+La keyword await sta per async wait

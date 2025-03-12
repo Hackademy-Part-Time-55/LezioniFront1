@@ -55,6 +55,21 @@ function createColumnCard(category) {
     return col;
 }
 
+document.addEventListener('DOMContentLoaded', async () => {
+
+    const categoriesRow = document.getElementById('categoriesRow');
+
+    const response = await fetch('/server/api/categorie.json');
+    console.log(response.status);
+
+    const categories = await response.json();
+    categories.forEach((category) => {
+        const col = createColumnCard(category);
+        categoriesRow.appendChild(col);
+    });
+});
+
+/*
 const categoriesRow = document.getElementById('categoriesRow');
 
 fetch('/server/api/categorie.json')
@@ -76,3 +91,4 @@ fetch('/server/api/categorie.json')
         // errore lato client
         console.log(error);
     });
+*/
