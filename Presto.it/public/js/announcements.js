@@ -1,3 +1,19 @@
+function populateCategorySelect(announcements, parentSelect) {
+    const categoriesSet = new Set();
+
+    announcements.forEach((announcement) => {
+        categoriesSet.add(announcement.category);
+    });
+
+    categoriesSet.forEach((category) => {
+        const categoryOption = document.createElement('option');
+        categoryOption.setAttribute('value', category);
+        categoryOption.textContent = category;
+
+        parentSelect.appendChild(categoryOption);
+    });
+}
+
 function generateAnnouncementCard(announcement) {
 
     return `
@@ -27,7 +43,6 @@ function generateAnnouncementCard(announcement) {
         </div>
     </div>`;
 }
-
 
 function populateAnnouncementsRow(announcements) {
 
@@ -115,14 +130,15 @@ async function readAllAnnouncements() {
 
 document.addEventListener('DOMContentLoaded', async () => {
 
-    const announcements = await readAllAnnouncements();
-    populateAnnouncementsRow(announcements);
-
     const searchInput = document.getElementById('searchInput');
     const categorySelect = document.getElementById('categorySelect');
     const minPriceInput = document.getElementById('minPriceInput');
     const maxPriceInput = document.getElementById('maxPriceInput');
     const sortSelect = document.getElementById('sortSelect');
+
+    const announcements = await readAllAnnouncements();
+    populateCategorySelect(announcements, categorySelect);
+    populateAnnouncementsRow(announcements);
     
     const searchAndSortForm = document.getElementById('searchAndSortForm');
     searchAndSortForm.addEventListener('submit', (event) => {
