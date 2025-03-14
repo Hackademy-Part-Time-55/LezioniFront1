@@ -1,4 +1,5 @@
 function populateCategorySelect(announcements, parentSelect) {
+    
     const categoriesSet = new Set();
 
     announcements.forEach((announcement) => {
@@ -17,7 +18,7 @@ function populateCategorySelect(announcements, parentSelect) {
 function generateAnnouncementCard(announcement) {
 
     return `
-    <div class="card">
+    <a class="card text-decoration-none" href="/announcement.html?id=${announcement.id}">
         <div class="position-relative">
             <img src="https://picsum.photos/id/237/600/450" class="card-img-top" alt="...">
             <span class="position-absolute top-0 end-0 badge px-4 py-2 ${announcement.type.toLowerCase() == 'sell' ? 'bg-danger' : 'bg-primary'} text-uppercase">${announcement.type}</span>
@@ -41,7 +42,7 @@ function generateAnnouncementCard(announcement) {
                 <span>27/03/2023</span>
             </div>
         </div>
-    </div>`;
+    </a>`;
 }
 
 function populateAnnouncementsRow(announcements) {
@@ -154,7 +155,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         const announcementsFiltered = filteringAndSorting(announcements, options);
 
-        // mostro gli annunci filtrati e ordinati
         populateAnnouncementsRow(announcementsFiltered);
     });
 });
