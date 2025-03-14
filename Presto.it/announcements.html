@@ -55,49 +55,58 @@
         <!-- FORM -->
         <!-- TODO: gli id sono no sense e i value anche -->
         <section class="container p-4 bg-primary">
-            <form class="row g-4" action="">
+            <form id="searchAndSortForm" class="row g-4">
                 <div class="col-12 col-md-6">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Cerca">
-                        <label for="floatingInput">Cerca</label>
+                        <input id="searchInput" type="text" class="form-control" placeholder="Cerca">
+                        <label for="searchInput">Cerca</label>
                     </div>
                 </div>
+
+
                 <div class="col-12 col-md-6">
                     <div class="form-floating">
-                        <select class="form-select" id="floatingSelect" >
+                        <select id="categorySelect" class="form-select">
+                            <!-- TODO: popolare le categorie!!!! -->
                             <option selected value="">Tutti gli annunci</option>
-                            <option value="1">Elettronica</option>
-                            <option value="2">Motori</option>
+                            <option value="Elettronica">Elettronica</option>
+                            <option value="Motori">Motori</option>
                         </select>
-                        <label for="floatingSelect">Filtra per Categorie</label>
+                        <label for="categorySelect">Filtra per Categorie</label>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-3">
+                    <div class="form-floating">
+                        <input id="minPriceInput" type="number" min="0" class="form-control" placeholder="Min Price">
+                        <label for="minPriceInput">Min Price</label>
                     </div>
                 </div>
                 <div class="col-12 col-md-3">
                     <div class="form-floating">
-                        <input type="number" min="0" class="form-control" id="floatingPassword" placeholder="Min Price">
-                        <label for="floatingPassword">Min Price</label>
+                        <input id="maxPriceInput" type="number" min="0" class="form-control" placeholder="Max Price">
+                        <label for="maxPriceInput">Max Price</label>
                     </div>
                 </div>
+
+
                 <div class="col-12 col-md-3">
                     <div class="form-floating">
-                        <input type="number" min="0" class="form-control" id="floatingPassword2" placeholder="Max Price">
-                        <label for="floatingPassword2">Max Price</label>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3">
-                    <div class="form-floating">
-                        <select class="form-select" id="floatingSelect2" >
+                        <select id="sortSelect" class="form-select">
                             <option selected value="">Nessun Ordine</option>
-                            <option value="1">Dal più recente</option>
-                            <option value="2">Dal più vecchio</option>
-                            <option value="3">Dal meno costoso</option>
-                            <option value="4">Dal più costoso</option>
-                            <option value="5">Dalla A alla Z</option>
-                            <option value="6">Dalla Z alla A</option>
+                            <option value="descByDate">Dal più recente</option>
+                            <option value="ascByDate">Dal più vecchio</option>
+                            <option value="ascByPrice">Dal meno costoso</option>
+                            <option value="descByPrice">Dal più costoso</option>
+                            <option value="ascByAlpha">Dalla A alla Z</option>
+                            <option value="descByAlpha">Dalla Z alla A</option>
                         </select>
-                        <label for="floatingSelect2">Ordina Annunci</label>
+                        <label for="sortSelect">Ordina Annunci</label>
                     </div>
                 </div>
+
+
                 <div class="col-12 col-md-3">
                     <button type="submit" class="w-100 h-100 btn btn-accent">Cerca</button>
                 </div>

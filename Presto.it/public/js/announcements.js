@@ -28,9 +28,16 @@ function generateAnnouncementCard(announcement) {
     </div>`;
 }
 
+
 function populateAnnouncementsRow(announcements) {
 
     const announcementsRow = document.getElementById('announcementsRow');
+
+    // clear announcementsRow
+    // announcementsRow.innerHTML = '';
+    while(announcementsRow.hasChildNodes()) {
+        announcementsRow.removeChild(announcementsRow.firstChild);
+    }
 
     announcements.forEach((announcement) => {
         const col = document.createElement('div');
@@ -39,6 +46,63 @@ function populateAnnouncementsRow(announcements) {
 
         announcementsRow.appendChild(col);
     });
+}
+
+function filteringAndSorting(announcements, options) {
+    
+    const announcementsFiltered = announcements.filter((announcement) => {
+
+        let isAnnouncementRequired = true;
+
+        if(options.searched) {
+            isAnnouncementRequired = announcement.name.toLowerCase().includes(options.searched.toLowerCase())
+        }
+
+        if(isAnnouncementRequired && options.category) {
+            isAnnouncementRequired = announcement.category == options.category;
+        }
+
+        if(isAnnouncementRequired && options.minPrice) {
+            isAnnouncementRequired = Number(options.minPrice) < Number(announcement.price);
+        }
+
+        if(isAnnouncementRequired && options.maxPrice) {
+            isAnnouncementRequired = Number(announcement.price) < Number(options.maxPrice);
+        }
+        
+        return isAnnouncementRequired;
+    });
+
+    switch(options.sortBy) {
+        case 'ascByDate':
+            // TODO
+            break;
+        case 'descByDate':
+            // TODO
+            break;
+        case 'ascByPrice':
+            announcementsFiltered.sort((leftAnnouncement, rightAnnouncement) => {
+                return Number(leftAnnouncement.price) - Number(rightAnnouncement.price);
+            });
+            break;
+        case 'descByPrice':
+            announcementsFiltered.sort((leftAnnouncement, rightAnnouncement) => {
+                return Number(rightAnnouncement.price) - Number(leftAnnouncement.price);
+            });
+            break;
+        case 'ascByAlpha':
+            announcementsFiltered.sort((leftAnnouncement, rightAnnouncement) => {
+                return leftAnnouncement.name.localeCompare(rightAnnouncement.name);
+            });
+            break;
+        case 'descByAlpha':
+            announcementsFiltered.sort((leftAnnouncement, rightAnnouncement) => {
+                return rightAnnouncement.name.localeCompare(leftAnnouncement.name);
+            });
+            break;
+    }
+    
+    return announcementsFiltered;
 }
 
 async function readAllAnnouncements() {
@@ -50,9 +114,38 @@ async function readAllAnnouncements() {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+
     const announcements = await readAllAnnouncements();
     populateAnnouncementsRow(announcements);
+
+    const searchInput = document.getElementById('searchInput');
+    const categorySelect = document.getElementById('categorySelect');
+    const minPriceInput = document.getElementById('minPriceInput');
+    const maxPriceInput = document.getElementById('maxPriceInput');
+    const sortSelect = document.getElementById('sortSelect');
+    
+    const searchAndSortForm = document.getElementById('searchAndSortForm');
+    searchAndSortForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const options = {
+            searched: searchInput.value,
+            category: categorySelect.value,
+            minPrice: minPriceInput.value,
+            maxPrice: maxPriceInput.value,
+            sortBy: sortSelect.value
+        };
+        
+        const announcementsFiltered = filteringAndSorting(announcements, options);
+
+        // mostro gli annunci filtrati e ordinati
+        populateAnnouncementsRow(announcementsFiltered);
+    });
 });
+
+
+
+
 
 /*
 <div class="col-12 col-md-6 col-xl-4">
