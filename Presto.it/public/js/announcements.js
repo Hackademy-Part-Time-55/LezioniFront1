@@ -17,6 +17,8 @@ function populateCategorySelect(announcements, parentSelect) {
 
 function generateAnnouncementCard(announcement) {
 
+    const date = new Date(announcement.createdAt);
+
     return `
     <a class="card text-decoration-none" href="/announcement.html?id=${announcement.id}">
         <div class="position-relative">
@@ -39,7 +41,7 @@ function generateAnnouncementCard(announcement) {
             </div>
             <div>
                 <i class="bi bi-calendar-fill me-1"></i>
-                <span>27/03/2023</span>
+                <span>${date.toLocaleDateString()}</span>
             </div>
         </div>
     </a>`;
@@ -91,10 +93,14 @@ function filteringAndSorting(announcements, options) {
 
     switch(options.sortBy) {
         case 'ascByDate':
-            // TODO
+            announcementsFiltered.sort((leftAnnouncement, rightAnnouncement) => {
+                return leftAnnouncement.createdAt - rightAnnouncement.createdAt;
+            });
             break;
         case 'descByDate':
-            // TODO
+            announcementsFiltered.sort((leftAnnouncement, rightAnnouncement) => {
+                return rightAnnouncement.createdAt - leftAnnouncement.createdAt;
+            });
             break;
         case 'ascByPrice':
             announcementsFiltered.sort((leftAnnouncement, rightAnnouncement) => {
